@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link 
+          rel="stylesheet" 
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+          crossorigin="anonymous"
+    >
+    
+      <!-- font awesome Icon CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+
+  <!-- BODY -->
+  <body>
+    <div class="calculator">
+      <h1 >Abhishek Sahu Calculator</h1>
+      <!-- Calculator Screen -->
+      <input class="cal-screen" id="screen" value="" disabled />
+      
+      <!-- Calculator Keys -->
+      <div class="cal-key">
+        <!-- Row-1 -->
+        <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear" onclick="Allclear()">AC</button>
+        <button type="button" value="backspace" class="backspace btn btn-light" onclick="deletelast()"><i class="fas fa-backspace"></i></button>
+        <button type="button" class="operator btn btn-info" value="/" onclick="screenValue('/')">&divide;</button>
+
+        <!-- Row-2 -->
+        <button type="button" class="btn btn-light" value="7" onclick="screenValue('7')">7</button>
+        <button type="button" class="btn btn-light" value="8" onclick="screenValue('8')">8</button>
+        <button type="button" class="btn btn-light" value="9" onclick="screenValue('9')">9</button>
+        <button type="button" class="operator btn btn-info" value="*" onclick="screenValue('*')">&times;</button>
+
+        <!-- Row-3 -->
+        <button type="button" class="btn btn-light" value="4" onclick="screenValue('4')">4</button>
+        <button type="button" class="btn btn-light" value="5" onclick="screenValue('5')">5</button>
+        <button type="button" class="btn btn-light" value="6" onclick="screenValue('6')">6</button>
+        <button type="button" class="operator btn btn-info" value="-" onclick="screenValue('-')">-</button>
+        
+        <!-- Row-4 -->
+        <button type="button" class="btn btn-light" value="1" onclick="screenValue('1')">1</button>
+        <button type="button" class="btn btn-light" value="2" onclick="screenValue('2')">2</button>
+        <button type="button" class="btn btn-light" value="3" onclick="screenValue('3')">3</button>
+        <button type="button" class="operator btn btn-info" value="+" onclick="screenValue('+')">+</button>
+
+        <!-- Row-5 -->
+        <button type="button" class="operator dot btn btn-info" value="." onclick="screenValue('.')">.</button>
+        <button type="button"  class="btn btn-light" value="0" onclick="screenValue('0')">0</button>
+        <button type="button"  class="btn btn-light" value="00" onclick="screenValue('00')">00</button>
+        <button type="button" class="equal-screenValue operator btn btn-warning" value="=" onclick="result()">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
